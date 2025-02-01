@@ -12,7 +12,6 @@ export function BackgroundGradient() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -20,39 +19,39 @@ export function BackgroundGradient() {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    // Gradient parameters
     const gradients = [
       {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         size: 400,
-        hue: 240, // Blue
         direction: [Math.random() - 0.5, Math.random() - 0.5],
       },
       {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         size: 400,
-        hue: 280, // Purple
         direction: [Math.random() - 0.5, Math.random() - 0.5],
       },
       {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         size: 400,
-        hue: 170, // Cyan
+        direction: [Math.random() - 0.5, Math.random() - 0.5],
+      },
+      {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: 400,
         direction: [Math.random() - 0.5, Math.random() - 0.5],
       },
     ];
 
     const animate = () => {
-      // Clear canvas with a semi-transparent black
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw gradients
       gradients.forEach((gradient) => {
-        // Update position
         gradient.x += gradient.direction[0];
         gradient.y += gradient.direction[1];
 
@@ -62,8 +61,7 @@ export function BackgroundGradient() {
         if (gradient.y < 0 || gradient.y > canvas.height)
           gradient.direction[1] *= -1;
 
-        // Create radial gradient
-        const grd = ctx.createRadialGradient(
+        const radialGradient = ctx.createRadialGradient(
           gradient.x,
           gradient.y,
           0,
@@ -71,13 +69,9 @@ export function BackgroundGradient() {
           gradient.y,
           gradient.size,
         );
-
-        // Add color stops
-        grd.addColorStop(0, `hsla(${gradient.hue}, 100%, 50%, 0.03)`);
-        grd.addColorStop(1, "transparent");
-
-        // Fill gradient
-        ctx.fillStyle = grd;
+        radialGradient.addColorStop(0, "rgba(240, 240, 240, 0.03)");
+        radialGradient.addColorStop(1, "transparent");
+        ctx.fillStyle = radialGradient;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
       });
 

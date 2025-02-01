@@ -7,7 +7,7 @@ export function Header() {
         <div className="flex items-center justify-between py-6">
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold text-white">
-              cmOS
+              cypherOS
             </Link>
           </div>
           <nav className="hidden items-center space-x-4 md:flex">

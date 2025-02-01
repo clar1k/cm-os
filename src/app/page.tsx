@@ -19,7 +19,7 @@ export default function Home() {
           <h1
             className={`${inter.className} bg-gradient-to-r from-white to-gray-500 bg-clip-text text-6xl font-bold text-transparent`}
           >
-            cmOS
+            cypherOS
           </h1>
           <p className={`${inter.className} text-xl font-medium text-gray-200`}>
             community manager on steroids
@@ -34,7 +34,7 @@ export default function Home() {
 
         <div className="mt-[450px] flex items-center justify-center">
           <Link href="/create" className="relative">
-            <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 opacity-50 blur" />
+            <div className="absolute -inset-0.5 rounded-lg bg-white opacity-40 blur" />
             <Button
               className={`relative ${inter.className} rounded-3xl border border-gray-800 bg-black px-20 py-10 text-2xl text-white transition-all duration-200 hover:bg-black/80`}
             >
