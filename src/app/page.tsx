@@ -27,8 +27,8 @@ export default function Home() {
           <p
             className={`${inter.className} mt-2 text-lg leading-relaxed text-gray-500`}
           >
-            Develop a new AI community management to effectively moderate your
-            Telegram, Twitter, and Farcaster with just a few clicks.
+            Develop AI community manager to effectively moderate your Telegram,
+            Twitter, and Farcaster with just a few clicks.
           </p>
         </div>
 
