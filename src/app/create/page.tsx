@@ -97,21 +97,6 @@ function CustomizeManagerForm({
               />
             </div>
           </div>
-          <div className="group grid gap-2">
-            <Label
-              htmlFor="knowledge"
-              className="text-sm font-medium text-gray-300"
-            >
-              Knowledge Base
-            </Label>
-            <Textarea
-              id="knowledge"
-              placeholder="Enter knowledge base for your agent"
-              className="h-20 resize-none rounded-lg border-gray-800 bg-black/50 text-white placeholder-gray-600 backdrop-blur-sm transition-all focus:border-white/40 focus:bg-black/70 focus:shadow-[0_0_20px_rgba(255,255,255,0.1)] focus:ring-0"
-              value={knowledge}
-              onChange={(e) => setKnowledge(e.target.value)}
-            />
-          </div>
         </div>
         <div className="relative mt-6 flex items-center justify-end gap-3">
           <Button

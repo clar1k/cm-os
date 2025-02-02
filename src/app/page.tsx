@@ -63,10 +63,7 @@ export default function Home() {
   } = useTypewriter(description, 30, 6000);
 
   useEffect(() => {
-    // Start title animation after initial delay
     setTimeout(() => setShowTitle(true), 1000);
-
-    // Start greeting animation after title
     setTimeout(() => setShowGreeting(true), 3000);
   }, []);
 
