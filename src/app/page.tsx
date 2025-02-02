@@ -67,7 +67,7 @@ export default function Home() {
               management tailored to the unique needs of their communities.
             </p>
           </div>
-          <div className="mt-[450px] flex items-center justify-center">
+          <div className="mt-[250px] flex items-center justify-center">
             <Link href="/create" className="relative">
               <div className="absolute -inset-0.5 rounded-lg bg-white opacity-40 blur" />
               <Button className="relative rounded-none border border-white bg-black px-20 py-10 text-2xl text-white transition-all duration-200 hover:bg-black">
