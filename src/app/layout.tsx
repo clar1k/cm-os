@@ -1,8 +1,8 @@
 import "~/styles/globals.css";
 import localFont from "next/font/local";
-import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { DynamicProvider } from "~/providers";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "cypherOS",
@@ -18,6 +18,7 @@ export default function RootLayout({
     <html lang="en" className={`${arcade.className}`}>
       <body className="bg-black">
         <DynamicProvider>{children}</DynamicProvider>
+        <Toaster />
       </body>
     </html>
   );
