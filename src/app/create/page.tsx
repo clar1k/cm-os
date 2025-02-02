@@ -16,7 +16,6 @@ import { Label } from "~/components/ui/label";
 import { UploadButton } from "~/lib/uploadthing";
 import { useDynamicContext, useIsLoggedIn } from "@dynamic-labs/sdk-react-core";
 import { Sparkles, Bot, Coins } from "lucide-react";
-import { BackgroundVideo } from "~/components/background-video";
 
 function CustomizeManagerForm({
   onProgressChange,

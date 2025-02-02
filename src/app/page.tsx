@@ -6,13 +6,19 @@ import { BackgroundVideo } from "~/components/background-video";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { cn } from "~/lib/utils";
 
 export default function Home() {
   const [showText, setShowText] = useState(false);
+  const [showTextAnimation, setShowTextAnimation] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setShowText(true);
+      setShowTextAnimation(true);
+      setTimeout(() => {
+        setShowTextAnimation(false);
+      }, 3500);
     }, 2000);
   }, []);
 
@@ -38,12 +44,27 @@ export default function Home() {
             <h1 className="h-[66px] bg-gradient-to-r from-white to-gray-500 bg-clip-text text-6xl font-bold text-transparent">
               Cypher OS
             </h1>
-            <p className="text-xl font-medium text-gray-200">
-              community manager on steroids
-            </p>
-            <p className="mt-2 text-lg leading-relaxed text-gray-200">
-              Develop AI community manager to effectively moderate your
-              Telegram, Twitter, and Farcaster with just a few clicks.
+            <div className="relative">
+              <div
+                className={cn(
+                  "font-[arcade] text-xl font-medium text-gray-200",
+                  showText &&
+                    showTextAnimation &&
+                    "motion-preset-typewriter-[54] motion-loop-once motion-duration-[7000ms]",
+                )}
+              >
+                Hey, I`m Cypher! Mascot of the next gen management OS.
+              </div>
+            </div>
+            {/* Typewriter animation */}
+            <p className="mt-2 text-xl leading-relaxed text-gray-200">
+              CypherOS (also known as a Community Manager Operating System) is a
+              state-of-the-art onchain AI agent designed to pump up community
+              management on the next level by harnessing the power of blockchain
+              and AI. Built on the Ethereum network, CypherOS provides a secure,
+              transparent, and decentralized way to build and deploy their own
+              custom AI-driven agents for smart and efficient community
+              management tailored to the unique needs of their communities.
             </p>
           </div>
           <div className="mt-[450px] flex items-center justify-center">
