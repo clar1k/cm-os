@@ -10,27 +10,6 @@ export function Header() {
               Cypher OS
             </Link>
           </div>
-          <nav className="hidden items-center space-x-4 md:flex">
-            <Link
-              href="/features"
-              className="text-gray-300 transition-colors hover:text-white"
-            >
-              Features
-            </Link>
-            <Link
-              href="/pricing"
-              className="text-gray-300 transition-colors hover:text-white"
-            >
-              Pricing
-            </Link>
-            <Link
-              href="https://cypheros.gitbook.io/docs"
-              className="text-gray-300 transition-colors hover:text-white"
-              target="_blank"
-            >
-              Docs
-            </Link>
-          </nav>
         </div>
       </div>
     </header>

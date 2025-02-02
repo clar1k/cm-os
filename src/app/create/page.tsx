@@ -50,7 +50,7 @@ function CustomizeManagerForm({
             }}
             className="mr-2 inline-block"
           />
-          Create Community Manager
+          Customize
         </Button>
       </DialogTrigger>
       <DialogContent className="border-none bg-black/90 text-white backdrop-blur-xl sm:max-w-[700px]">
@@ -165,7 +165,7 @@ function TokenDataForm({
             }}
             className="mr-2 inline-block"
           />
-          Add Token Data
+          Edit
         </Button>
       </DialogTrigger>
       <DialogContent className="border-none bg-black/90 text-white backdrop-blur-xl sm:max-w-[500px]">
@@ -217,7 +217,10 @@ function TokenDataForm({
                 endpoint="imageUploader"
                 onClientUploadComplete={(res) => {
                   console.log("Files: ", res);
-                  setImage(res[0].url);
+                  const imageUrl = res[0]?.url;
+                  if (imageUrl) {
+                    setImage(imageUrl);
+                  }
                   alert("Upload Completed");
                 }}
                 onUploadError={(error: Error) => {
@@ -238,7 +241,7 @@ function TokenDataForm({
             type="submit"
             className="rounded-lg bg-gradient-to-r from-cyan-500 to-teal-500 px-6 font-medium text-white transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]"
           >
-            Create
+            Save
           </Button>
         </div>
       </DialogContent>
@@ -310,7 +313,15 @@ export default function CreateAgent() {
             <TokenDataForm onProgressChange={setTokenProgress} />
           </div>
         </div>
-
+        <div className="mt-4 flex flex-col gap-2">
+          <Label htmlFor="bio" className="text-sm font-medium text-gray-300">
+            Bot Api Token
+          </Label>
+          <Input
+            placeholder="Enter bot api token"
+            className="group relative overflow-hidden rounded-xl border-2 border-white/20 bg-black/50 px-8 py-5 text-xl text-white backdrop-blur-sm transition-all hover:border-white/40 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+          />
+        </div>
         <div className="mt-12 text-center">
           <Button
             type="submit"
