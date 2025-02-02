@@ -16,6 +16,7 @@ import { Label } from "~/components/ui/label";
 import { UploadButton } from "~/lib/uploadthing";
 import { useDynamicContext, useIsLoggedIn } from "@dynamic-labs/sdk-react-core";
 import { Sparkles, Bot, Coins } from "lucide-react";
+import { BackgroundVideo } from "~/components/background-video";
 
 function CustomizeManagerForm({
   onProgressChange,
@@ -253,9 +254,7 @@ export default function CreateAgent() {
   const isLoggedIn = useIsLoggedIn();
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-black to-black p-8 font-sans text-white">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-
+    <div className="relative min-h-screen overflow-hidden bg-black p-8 font-sans text-white">
       <div className="relative">
         <div className="mb-12 text-center">
           <div className="flex items-center justify-center gap-2 text-4xl font-bold tracking-tight">
