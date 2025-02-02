@@ -107,7 +107,7 @@ function CustomizeManagerForm({
           </Button>
           <Button
             type="submit"
-            className="rounded-lg bg-gradient-to-r from-pink-500 to-orange-500 px-6 font-medium text-white transition-all hover:shadow-[0_0_20px_rgba(236,72,153,0.4)]"
+            className="rounded-lg bg-white px-6 font-medium text-black transition-all hover:bg-white"
           >
             Create
           </Button>
@@ -148,7 +148,7 @@ function TokenDataForm({
               width: 24,
               height: 24,
             }}
-            className="mr-2 inline-block"
+            className="mr-2 inline-block text-white"
           />
           Edit
         </Button>
@@ -157,7 +157,7 @@ function TokenDataForm({
         <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-500/20 via-transparent to-teal-500/20 opacity-50" />
         <DialogHeader className="relative">
           <DialogTitle className="mb-2 text-center text-2xl font-bold tracking-tight">
-            <Coins className="mr-2 inline-block h-5 w-5" />
+            <Coins className="mr-2 inline-block h-5 w-5 text-white" />
             Rivens Token Data
           </DialogTitle>
           <DialogDescription className="text-sm text-gray-400">
@@ -224,7 +224,7 @@ function TokenDataForm({
           </Button>
           <Button
             type="submit"
-            className="rounded-lg bg-gradient-to-r from-cyan-500 to-teal-500 px-6 font-medium text-white transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]"
+            className="rounded-lg bg-white px-6 font-medium text-black transition-all hover:bg-white"
           >
             Save
           </Button>
@@ -245,22 +245,13 @@ export default function CreateAgent() {
       <div className="relative">
         <div className="mb-12 text-center">
           <div className="flex items-center justify-center gap-2 text-4xl font-bold tracking-tight">
-            <Sparkles className="mr-2 inline-block h-8 w-8 animate-pulse text-purple-500" />
+            <Sparkles className="mr-2 inline-block h-8 w-8 animate-pulse text-white" />
             Create your agent
           </div>
           <p className="mt-2 text-gray-400">
             Configure your AI community manager and token details
           </p>
         </div>
-
-        {!isLoggedIn && (
-          <Button
-            onClick={() => setShowAuthFlow(true)}
-            className="absolute right-0 top-0 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 font-medium transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]"
-          >
-            Connect your wallet
-          </Button>
-        )}
 
         <div className="mb-12">
           <div className="mb-2 flex items-center justify-between text-sm text-gray-400">
@@ -283,7 +274,7 @@ export default function CreateAgent() {
                   width: 24,
                   height: 24,
                 }}
-                className="text-purple-500"
+                className="text-white"
               />
               <span className="text-2xl leading-none">Customize Manager</span>
             </div>
@@ -292,7 +283,7 @@ export default function CreateAgent() {
 
           <div>
             <h2 className="mb-6 text-2xl font-semibold tracking-tight">
-              <Coins className="mr-2 inline-block h-6 w-6 text-emerald-500" />
+              <Coins className="mr-2 inline-block h-6 w-6 text-white" />
               Token Data (Rivens)
             </h2>
             <TokenDataForm onProgressChange={setTokenProgress} />
@@ -310,7 +301,7 @@ export default function CreateAgent() {
         <div className="mt-12 text-center">
           <Button
             type="submit"
-            className="rounded-xl bg-gradient-to-r from-pink-500 to-orange-500 px-12 py-6 text-lg font-medium tracking-tight text-white transition-all hover:shadow-[0_0_30px_rgba(236,72,153,0.4)]"
+            className="rounded-xl bg-white px-12 py-6 text-lg font-medium tracking-tight text-black transition-all hover:bg-white"
           >
             Create
           </Button>
